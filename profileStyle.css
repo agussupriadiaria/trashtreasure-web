@@ -1,0 +1,233 @@
+/* Resetting default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a3d4a7;
+    color: #333;
+    background-image: linear-gradient(rgba(0, 2, 1, 0.571), rgba(0, 2, 1, 0.907)), url(webImages/botol\ plastik\ estetik\ rectangle.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    padding: 20px;
+    position: relative;
+    z-index: 10; /* Keep it on top */
+}
+
+/* Logo styling */
+header .logo h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb;
+}
+
+nav ul li a.active {
+    color: #ffeb3b;
+}
+
+/* Menu Toggle (3-bar dropdown button) */
+.menu-toggle {
+    display: none; /* Hidden on larger screens */
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    top: 50%; /* Position the toggle vertically centered */
+    transform: translateY(-50%); /* Center the toggle perfectly */
+    margin-left: auto; /* Align toggle to the right */
+}
+
+/* Profile header styling */
+.profile-header {
+    margin-bottom: 10px; /* Mengurangi jarak bawah agar lebih kecil */
+}
+
+.profile-pic {
+    width: 80px; /* Mengurangi ukuran gambar profil */
+    height: 80px; /* Proporsional dengan width */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00796b; /* Mengurangi ketebalan border */
+}
+
+.profile-header h1 {
+    font-size: 1.2em; /* Mengurangi ukuran font */
+    margin-top: 8px; /* Mengurangi jarak antara gambar profil dan teks */
+}
+
+/* Profile container styling */
+.profile-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px; /* Sesuai dengan desain login */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: auto; /* Menjadikan elemen berada di tengah */
+}
+
+/* Profile details styling */
+.profile-details {
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+}
+
+.detail-item strong {
+    display: block;
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    margin: 0; /* Menghilangkan margin default dari paragraf */
+    color: #333; /* Menetapkan warna teks */
+}
+
+.balance {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004d40;
+}
+
+/* Tombol umum styling */
+.btn-history,
+.btn-edit {
+    display: inline-block;
+    padding: 10px 20px; /* Ukuran tombol */
+    background-color: #00796b; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 1em; /* Ukuran teks */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    border: 1px solid transparent; /* Membuat border transparan */
+    cursor: pointer; /* Menampilkan kursor pointer */
+}
+
+/* Tombol history styling */
+.btn-history {
+    background-color: #00796b; /* Warna latar belakang tombol history */
+}
+
+.btn-history:hover {
+    background-color: #004d40; /* Warna latar belakang tombol saat hover */
+}
+
+/* Tombol edit styling */
+.btn-edit {
+    background-color: #0288d1; /* Warna latar belakang tombol edit */
+}
+
+.btn-edit:hover {
+    background-color: #01579b; /* Warna latar belakang tombol saat hover */
+}
+
+/* Menambahkan margin antara tombol */
+.btn-history,
+.btn-edit {
+    margin: 10px 5px; /* Margin atas dan bawah 10px, kiri dan kanan 5px */
+}
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px; /* Sesuai dengan desain login */
+    background-color: #00796b;
+    color: white;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Media Queries for mobile view */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu toggle on mobile */
+    }
+
+    /* Hide the menu initially */
+    nav ul {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #00796b;
+        padding: 10px;
+        position: absolute;
+        top: 100%; /* Position below header */
+        right: 0; /* Align to right */
+        width: auto; /* Take only as much space as needed */
+    }
+
+    /* Show the dropdown when toggle is active */
+    nav ul.show {
+        display: flex;
+    }
+
+    header .logo h1 {
+        font-size: 1.2em;
+    }
+
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero-images {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1em;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-images {
+        flex-direction: column;
+    }
+}
